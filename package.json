@@ -1,0 +1,36 @@
+{
+  "name": "authentication-and-testing",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "migrate": "knex migrate:latest",
+    "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
+    "resetdb": "knex migrate:rollback && knex migrate:latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BloomInstituteOfTechnology/web-sprint-challenge-authentication-and-testing.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "4.17.3",
+    "helmet": "5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "0.95.15",
+    "sqlite3": "5.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "27.4.1",
+    "cross-env": "7.0.3",
+    "eslint": "8.10.0",
+    "jest": "27.5.1",
+    "jwt-decode": "^3.1.2",
+    "nodemon": "2.0.15",
+    "supertest": "6.2.2"
+  }
+}

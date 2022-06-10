@@ -41,7 +41,6 @@ const validateUser = async (req, res, next) => {
 const validateToken = (req, res, next) => {
   const user = req.user
   const { username, password } = req.body
-  console.log(user)
   const credentials = bcrypt.compareSync(password, user.password)
 
   function createToken(user) {
@@ -59,7 +58,7 @@ const validateToken = (req, res, next) => {
     ? next({ status: 401, message: 'username and password required' })
     : next({
       status: 200,
-      message: `welcome, ${username}`,
+      message: `welcome, ${username}.`,
       token: createToken(username),
     })
 }

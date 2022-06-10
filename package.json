@@ -22,7 +22,9 @@
     "helmet": "5.0.2",
     "jsonwebtoken": "^8.5.1",
     "knex": "0.95.15",
-    "sqlite3": "5.0.2"
+    "pg": "^8.7.3",
+    "pg-connection-string": "^2.5.0",
+    "postgres": "^3.2.4"
   },
   "devDependencies": {
     "@types/jest": "27.4.1",
